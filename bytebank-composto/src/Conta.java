@@ -1,16 +1,13 @@
-package bytebank;
+
 
 public class Conta {
-		double saldo;
+		private double saldo;
 		int agencia;
 		int numero;
-		String titular;
-		String cpf;
-		String profissao;
-		
+		Cliente titular;
+
 		public void deposita(double valor) {
 			this.saldo += valor;
-			System.out.println("Seu saldo em conta é: " + saldo);
 		}
 		
 		public boolean saca(double valor) {
@@ -32,6 +29,12 @@ public class Conta {
 				return false;
 			}
 		}
+		
+		public double getSaldo() {
+			return this.saldo;
+		}
+		
+		
 }
 
 
